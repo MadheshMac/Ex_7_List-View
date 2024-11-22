@@ -1,21 +1,14 @@
-# Ex.No:6 Implement an application that uses Explicit Intent using Android
-
-
+## Ex.No:7 Develop an android application to display the country name with image using list view in android studio.
 ## AIM:
-
-To create a two screens , first screen will take one number input from user. After click on Factorial button, second screen will open and it should display factorial of the same number using Explicit Intents.
-
+To create and develop the application to display the place name with image using list view in android studio
 
 ## EQUIPMENTS REQUIRED:
-
-Latest Version Android Studio
-
+Android Studio(Latest Version)
 
 ## ALGORITHM:
+## Step 1:Open Android Stdio and then click on File -> New -> New project.
 
-Step 1: Open Android Stdio and then click on File -> New -> New project.
-
-Step 2: Then type the Application name as “contentprovider″ and click Next. 
+Step 2: Then type the Application name as “listview″ and click Next.
 
 Step 3: Then select the Minimum SDK as shown below and click Next.
 
@@ -27,21 +20,15 @@ Step 6: Get contacts details and Display details give in MainActivity file.
 
 Step 7: Save and run the application.
 
-
-## MainActivity.java:
-
-
-
-
 ## PROGRAM:
-```
 /*
-Program to print the text “ExplicitIntent”.
-Developed by:E MADHESWARAN
-Registeration Number : 212222040090
-*/
 ```
-## Activity_main.xml
+Program to print the list of item.
+Developed by: SURENDHAR K
+egisteration Number :212222040166
+```
+*/
+## activity_main.xml:
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -51,213 +38,94 @@ Registeration Number : 212222040090
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="248dp"
-        android:layout_height="55dp"
-        android:fontFamily="sans-serif-black"
-        android:lineSpacingExtra="12sp"
-        android:text="ENTER THE NUMBER"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#E91E63"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="175dp"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Factorial"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
-
 ```
-## Activity_Second.xml
+## mylist.xml:
 ```
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity2">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="147dp"
-        android:layout_height="23dp"
-        android:fontFamily="sans-serif-black"
-        android:text="TextView"
-        android:textColor="#E91E63"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.856"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="Factorial is  : "
-        android:textAlignment="textEnd"
-        android:textAllCaps="true"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Medium Text"
+    android:textStyle="bold"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:padding="2dp"
+    android:textColor="#4d4d4d"
+    />
 ```
-
-
-## MainActivity.java
+## strings.xml:
 ```
-package com.example.ex_6final;
+<resources>
+    <string name="app_name">ListView</string>
+    <string-array name="array_technology">
+        <item>Android</item>
+        <item>Java</item>
+        <item>Php</item>
+        <item>Hadoop</item>
+        <item>Sap</item>
+        <item>Python</item>
+        <item>Ajax</item>
+        <item>C++</item>
+        <item>Ruby</item>
+        <item>Rails</item>
+        <item>.Net</item>
+        <item>Perl</item>
+    </string-array>
+</resources>
+```
+## MainActivity.java:
+```
+package com.example.exp7;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    EditText e1;
-    Button res;
+    ListView listView;
+    TextView textView;
+    String[] listItem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        e1=findViewById(R.id.editTextTextPersonName);
-        res=findViewById(R.id.button);
-        res.setOnClickListener(new View.OnClickListener() {
+        listView=(ListView)findViewById(R.id.listView);
+        textView=(TextView)findViewById(R.id.textView);
+        listItem = getResources().getStringArray(R.array.array_technology);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1, listItem);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view)
-            {
-                int n1=Integer.parseInt(e1.getText().toString());
-                int sum =1;
-                while(n1!=0)
-                {
-                    sum = sum * n1;
-                    n1--;
-                }
-                Intent intent=new Intent(getApplicationContext(),SecondActivity.class);
-                intent.putExtra("key",sum);
-                startActivity(intent);
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                // TODO Auto-generated method stub
+                String value=adapter.getItem(position);
+                Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
+
             }
         });
+
     }
 }
 ```
+## OUTPUT:
+![image](https://github.com/user-attachments/assets/f177fe41-9d54-494d-847c-2a4bc88de12d)
+![image](https://github.com/user-attachments/assets/3527d49c-5b57-4f0f-96c4-28f35524229f)
 
-## SecondActivity.Java
-```
-package com.example.ex_6final;
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-public class SecondActivity extends AppCompatActivity {
-    TextView t1;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
-        t1=findViewById(R.id.textView);
-        Intent intent=getIntent();
-        int result=intent.getIntExtra("key",0);
-        t1.setText(Integer.toString(result));
-    }
-}
-```
-
-## AndroidManifest.xml
-```
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.ex_6final">
-
-    <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Ex_6final"
-        tools:targetApi="31">
-        <activity android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".SecondActivity" />
-    </application>
-
-</manifest>
-```
-
-
-## OUTPUT
-
-![Screenshot 2024-09-30 143629](https://github.com/user-attachments/assets/a6f54290-6f76-4cbc-a1b3-abee10f3d4d4)
-
-
-![Screenshot 2024-09-30 143658](https://github.com/user-attachments/assets/e572f905-099a-4b75-b9ee-4855812b7cba)
-
-
-
-
-
-
-## RESULT
-Thus a Simple Android Application create a Explicit Intents using Android Studio is developed and executed successfully
